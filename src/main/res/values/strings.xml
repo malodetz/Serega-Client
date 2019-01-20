@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Temporary</string>
+    <string name="mystr">It is very long string!!!!!!!!!</string>
+    <string name="bnt_name">About application</string>
+    <string name="about_str">This application is very simple. It can not do nothing.</string>
+    <string name="btn1_mame">Button</string>
+</resources>
