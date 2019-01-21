@@ -13,7 +13,7 @@ class PostIdeasTask extends AsyncTask<Void, Void, Void> {
     Context context;
     Idea idea;
     ToPost post;
-    IdeasDataBaseHelper db;
+    DataBaseHelper db;
 
     @Override
     protected void onPreExecute() {
@@ -24,7 +24,7 @@ class PostIdeasTask extends AsyncTask<Void, Void, Void> {
     public PostIdeasTask(Context context, Idea idea) {
         this.context = context;
         this.idea = idea;
-        db = new IdeasDataBaseHelper(context);
+        db = new DataBaseHelper(context);
         post = new ToPost(idea);
     }
 

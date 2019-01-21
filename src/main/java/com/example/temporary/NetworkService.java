@@ -32,4 +32,8 @@ public class NetworkService {
     public IdeasAPI getIdeasAPI() {
         return mRetrofit.create(IdeasAPI.class);
     }
+
+    public UserAPI getUserAPI() {
+        return mRetrofit.create(UserAPI.class);
+    }
 }

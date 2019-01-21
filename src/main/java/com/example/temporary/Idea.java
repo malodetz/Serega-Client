@@ -5,6 +5,8 @@ import android.util.Log;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.util.Objects;
+
 class ToPost {
     @SerializedName("name")
     @Expose
@@ -28,6 +30,19 @@ class ToPost {
 }
 
 public class Idea {
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Idea idea = (Idea) o;
+        return getId() == idea.getId() &&
+                getAuthor() == idea.getAuthor() &&
+                Objects.equals(getTitle(), idea.getTitle()) &&
+                Objects.equals(getShortdesc(), idea.getShortdesc()) &&
+                Objects.equals(getLongdesc(), idea.getLongdesc()) &&
+                Objects.equals(getImage(), idea.getImage());
+    }
+
 
     @SerializedName("id")
     @Expose

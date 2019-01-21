@@ -11,7 +11,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 class GetAllIdeasTask extends AsyncTask<Void, Void, Void> {
-    IdeasDataBaseHelper dbhelper;
+    DataBaseHelper dbhelper;
     Context context;
 
     @Override
@@ -22,7 +22,7 @@ class GetAllIdeasTask extends AsyncTask<Void, Void, Void> {
 
     public GetAllIdeasTask(Context context) {
         this.context = context;
-        dbhelper = new IdeasDataBaseHelper(context);
+        dbhelper = new DataBaseHelper(context);
     }
 
     @Override
@@ -37,10 +37,10 @@ class GetAllIdeasTask extends AsyncTask<Void, Void, Void> {
                     for (Idea idea : ideas) {
                         dbhelper.insertIdea(idea);
                     }
-                    List<Idea> all = dbhelper.getAll();
-                    for (Idea x : all) {
-                        x.print();
-                    }
+//                    List<Idea> all = dbhelper.getAll();
+//                    for (Idea x : all) {
+//                        x.print();
+//                    }
                 }
 
                 @Override

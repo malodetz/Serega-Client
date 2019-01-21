@@ -21,4 +21,5 @@ public interface IdeasAPI {
 
     @PUT("ideas/{id}")
     Call<Idea> updateIdea(@Path("id") int id, @Body ToPost idea);
+
 }
